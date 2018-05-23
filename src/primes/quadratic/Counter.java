@@ -15,7 +15,7 @@ public Counter() {
 		this.token().SetPrimality(true);
 	}
 
-BigInteger squareroot ( BigInteger x) {
+static BigInteger squareroot ( BigInteger x) {
 	BigInteger r = x.divide(Token.TWO);
     for ( int i = 0; i < 30; i++ ) {
             r = (r.add(x.divide(r))).divide(Token.TWO);

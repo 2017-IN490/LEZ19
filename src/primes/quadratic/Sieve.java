@@ -75,10 +75,10 @@ public	boolean testloop(Token factortoken) {
 		
 		// estraggo dalla mappa la combinazione di righe 
 		qr = ((Matrix)((Filter)this.next()).column()).extractquadraticrelation();
-		System.out.println("a = "+qr.value1()+" b = "+qr.value2());
+		System.out.println("a = "+qr.value1()+" b = "+qr.sqrvalue2());
 		
-		System.out.println("a - b = "+qr.value1().subtract(qr.value2())+" is a factor of "+this.factoring+" ?" );
-		System.out.println("a + b = "+qr.value1().add(qr.value2())+" is a factor of "+this.factoring+" ?" );
+		System.out.println("a - b = "+qr.value1().subtract(qr.sqrvalue2())+" is a factor of "+this.factoring+" ?" );
+		System.out.println("a + b = "+qr.value1().add(qr.sqrvalue2())+" is a factor of "+this.factoring+" ?" );
 		//System.out.println("in Q:S:mailoop after while : ready to new S:get()");
 		//factoringtoken = this.next().get() ;		
 		//System.out.println("in Q:S:mailoop new integer : "+factoringtoken.value2()+" "+factoringtoken.value());

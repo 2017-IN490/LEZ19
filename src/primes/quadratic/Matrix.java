@@ -132,7 +132,9 @@ private void printrow() {
 }
 
 public void print() {
-	this.printrow();System.out.println();
+	this.printrow();
+	
+	System.out.println(" ["+this.candidate()+","+this.residue()+"]");
 	if (!(this.column()==null)) this.column().print();
 	else 
 		System.out.println();
@@ -201,7 +203,7 @@ public QuadraticRelation extractquadraticrelation() {
 					else
 						return (((Matrix)this.column()).extractquadraticrelation());
 			else
-				if (epsilon0.mod(Token.TWO).compareTo(BigInteger.ONE)==0)
+				if (epsilon0.divide(Token.TWO.pow(this.rows())).mod(Token.TWO).compareTo(BigInteger.ONE)==0)
 						 return new QuadraticRelation(this.candidate(), this.residue());
 					else
 						 return new QuadraticRelation(BigInteger.ONE, BigInteger.ONE);

@@ -20,6 +20,10 @@ class QuadraticRelation{
 	
 	BigInteger value2() {
 		return this.b ;
+	}
+		
+	BigInteger sqrvalue2() {
+			return Counter.squareroot(this.b) ;	
 		
 	}
 }
